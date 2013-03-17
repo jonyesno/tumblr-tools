@@ -47,7 +47,7 @@ The goal is to support the following workflow:
 To post photos from iPhoto, export the photos with the checkboxes ticked to
 'Include Title and keywords' to ensure the metadata is written out to the image
 file. Exporting with a sequential filename helps keep things understandable,
-too.
+too. See [screenshot](https://raw.github.com/wiki/zomo/tumblr-tools/iphoto-export.jpg).
 
 It's worth running the bulk uploader under a
 [`screen(1)`](http://www.gnu.org/software/screen/) session or similar, because
