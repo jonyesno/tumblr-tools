@@ -1,0 +1,5 @@
+---
+:hostname:     example.tumblr.com
+:credentials:  "~/.tumblr"
+:snapshotdir:  "~/tmp/example-tumblr-snapshot"
+:workdir:      "~/tmp/example-tumblr-working"
