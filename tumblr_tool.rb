@@ -58,7 +58,7 @@ class TumblrTool
   # there's likely some kick-ass way to do this, it escapes me just now
   def expand_cfg!
     @cfg.each do |k,v|
-      @cfg[k] = expand_tilde(@cfg[k])
+      @cfg[k] = expand_tilde(@cfg[k]) if @cfg[k].respond_to?('gsub')
     end
   end
 

@@ -3,3 +3,10 @@
 :credentials:  "~/.tumblr"
 :snapshotdir:  "~/tmp/example-tumblr-snapshot"
 :workdir:      "~/tmp/example-tumblr-working"
+# the fixups hash is optional, and specifies tag transformations
+:fixups:
+  :drop:
+    - "tag-not-to-reach-tumblr"
+  :map:
+    - :from: 'oldtag'
+      :to: 'newtag'

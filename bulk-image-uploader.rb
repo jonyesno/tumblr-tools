@@ -21,18 +21,6 @@ class Tumblr::Post::Photo
   end
 end
 
-# some iPhoto tags we don't want to become Tumblr tags
-# some iPhoto tags we want to rename in flight
-fixups = {
-  :drop => ['do stuff with this'],
-  :map  => [
-    { :from => 'airplane shots',  :to => 'airplanes' },
-    { :from => 'penínsulavaldés', :to => 'peninsulavaldes' },
-    { :from => 'peninsulavaldez', :to => 'peninsulavaldes' },
-  ],
-
-}
-
 src = ARGV.shift
 if src.nil? || !File.directory?(src)
   raise ArgumentError, "usage: bulk-image-uploader.rb directory"
@@ -41,6 +29,12 @@ system("mkdir -p #{src}/.done")
 
 erb = ERB.new(DATA.read)
 tt  = TumblrTool.new
+
+# some iPhoto tags we don't want to become Tumblr tags
+# some iPhoto tags we want to rename in flight
+# load a hash from config of the form
+# { :drop => [ tag1, tag2], :map => [ { :from => 'oldtag', :to => 'newtag} ] }
+fixups = tt.cfg[:fixups] || { :drop => [], :map => [] }
 
 last_date = Time.now.strftime("%Y:%m:%d %H:%M:%S")
 
