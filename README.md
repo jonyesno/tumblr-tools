@@ -5,13 +5,14 @@ third-party offerings that use the API but none met these requirements:
 
 * Single operation for many photos
 * Post each photo with its original date, from its EXIF metadata 
-* Post each photo with whatever keywords and caption it has, from its IPTC metadata 
+* Post each photo tagged with whatever keywords it has, from its IPTC metadata
+* Post each photo with whatever caption it has, from its IPTC metadata
 * Deal gracefully with Tumblr upload daily limits
 
 The goal is to support the following workflow:
 
 * Import photos into iPhoto
-* Add tags and captions using iPhoto
+* Add keywords and descriptions using iPhoto
 * Export from iPhoto to local directory
 * [ Optional ] Copy up to a friendly remote server with solid connectivity
 * Press go, fetch a beer
