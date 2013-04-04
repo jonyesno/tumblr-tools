@@ -98,7 +98,7 @@ Dir.entries(src).sort.each do |file|
   
   # add tags from ${TAGS} if present
   if ENV['TAGS']
-    tags << ENV['TAGS'].split(',')
+    tags += ENV['TAGS'].split(',')
   end
 
   tags.uniq!
