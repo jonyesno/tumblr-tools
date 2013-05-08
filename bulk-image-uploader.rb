@@ -140,7 +140,8 @@ type: photo
 state: published
 tags: <%= tags.join(',') %>
 date: <%= stamp.strftime("%b %d, %Y %H:%M %z") %>
-caption: "<%= caption %>"
+caption: |
+<%= caption.gsub(/^/, '  ') %>
 format: markdown
 source: nil
 ---
