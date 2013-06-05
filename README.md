@@ -41,6 +41,8 @@ The goal is to support the following workflow:
 * A Tumblr API key, secret, token and token secret. The `tumblr` gem [helps you token up](https://github.com/mwunsch/tumblr#authorization)
 * Recent Ruby
 * Patience with code written on the road, in the heat and at the end of thin internet string
+* [`libiptcdata`](http://libiptcdata.sourceforge.net) for `iptc` to read photo keywords and captions
+* [`libexif`](http://libexif.sourceforge.net) for `exif` to read photo dates
 
 ## Remarks
 
